@@ -92,7 +92,7 @@ function randomRussianWord() {
     window.correctTranslationRussian = vensyna;
 }
 
-//kontroll sõnade, et sõna on õige
+//kontroll sõnade, et sõna on vene õige
 function kontrollime_synad(event) {
     if (event.key === 'Enter') {
         const userInput = document.getElementById("kontroll").value.trim().toLowerCase();
@@ -110,7 +110,7 @@ function kontrollime_synad(event) {
         }
     }
 }
-
+//kontroll sõnade, et sõna on eesti õige
 function kontrollime_vene_synad(event) {
     if (event.key === 'Enter') {
         const userInput = document.getElementById("kontrolli").value.trim().toLowerCase();

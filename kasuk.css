@@ -1,4 +1,23 @@
-table{
-    margin: auto;
-    border: solid #242948;
+body {
+    transition: background-color 0.5s;
+}
+
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color: red;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid black;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
 }
