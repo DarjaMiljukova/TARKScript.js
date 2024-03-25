@@ -66,6 +66,8 @@ const russynad = [
     'валидирование',
 ];
 
+
+//see on random sõna
 function randomSyna() {
     // Juhuslik sõna
     const juhuslikSyna = Math.floor(Math.random() * synad.length);
@@ -80,6 +82,8 @@ function randomSyna() {
     window.correctTranslation = syna;
 }
 
+
+//kontroll sõnade_ et sõna on õige
 function kontrollime_synad(event) {
     if (event.key === 'Enter') {
         const userInput = document.getElementById("kontroll").value.trim().toLowerCase();
