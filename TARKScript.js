@@ -66,6 +66,8 @@ const russynad = [
     'валидирование',
 ];
 
+
+//see on random sõna
 function randomSyna() {
     // Juhuslik sõna
     const juhuslikSyna = Math.floor(Math.random() * synad.length);
