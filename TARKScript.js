@@ -80,6 +80,8 @@ function randomSyna() {
     window.correctTranslation = syna;
 }
 
+
+//kontroll sõnade_ et sõna on õige
 function kontrollime_synad(event) {
     if (event.key === 'Enter') {
         const userInput = document.getElementById("kontroll").value.trim().toLowerCase();
