@@ -81,9 +81,18 @@ function randomSyna() {
     // Salvestame õige tõlke
     window.correctTranslation = syna;
 }
+function randomRussianWord() {
 
+    const juhuslikVenSyna = Math.floor(Math.random() * russynad.length);
 
-//kontroll sõnade_ et sõna on õige
+    const vensyna = russynad[juhuslikVenSyna];
+
+    document.getElementById("random-rus-syna").innerHTML = vensyna;
+
+    window.correctTranslationRussian = vensyna;
+}
+
+//kontroll sõnade, et sõna on õige
 function kontrollime_synad(event) {
     if (event.key === 'Enter') {
         const userInput = document.getElementById("kontroll").value.trim().toLowerCase();
@@ -102,5 +111,23 @@ function kontrollime_synad(event) {
     }
 }
 
+function kontrollime_vene_synad(event) {
+    if (event.key === 'Enter') {
+        const userInput = document.getElementById("kontrolli").value.trim().toLowerCase();
+        const correctTranslationRussian = window.correctTranslationRussian.toLowerCase();
+        const correctTranslation = synad[russynad.indexOf(correctTranslationRussian)].toLowerCase();
 
+        if (userInput === correctTranslationRussian || userInput === correctTranslation) {
+            document.body.classList.remove("correct");
+            document.body.classList.add("correct");
+            document.getElementById("vastuse").innerText = "Õige!";
+        } else {
+            document.body.classList.remove("incorrect");
+            document.body.classList.add("incorrect");
+            document.getElementById("vastuse").innerText = "Vale!";
+        }
+    }
+}
+
+document.getElementById("kontrolli").addEventListener("keypress", kontrollime_vene_synad);
 document.getElementById("kontroll").addEventListener("keypress", kontrollime_synad);
