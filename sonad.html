@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Tarkavara sõnad</title>
+    <style>
+        body {
+            transition: background-color 0.5s;
+        }
+        .correct {
+            background-color: green;
+        }
+        .incorrect {
+            background-color: red;
+        }
+    </style>
+</head>
+<body onload="randomSyna()">
+<h1>Tarkvara sõnad</h1>
+<input type="button" value="Juhuslik sõna" onclick="randomSyna()">
+<br>
+<br>
+
+<div id="random-syna"></div>
+<label for="kontroll">Sisesta tõlge:</label>
+<input type="text" id="kontroll" oninput="kontrollime_synad()">
+<div id="vastus"></div>
+
+<script src="TARKScript.js"></script>
+</body>
+</html>
